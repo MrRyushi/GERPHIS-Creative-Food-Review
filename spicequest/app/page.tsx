@@ -1,61 +1,24 @@
-import Image from "next/image";
+import Nav from "./Components/Nav";
+import Link from 'next/link';
 
 export default function Home() {
+
   return (
-    <div className="bg-background h-screen w-screen">
+    <div className="bg-gradient-to-t from-gradient2 to-gradient1 w-screen overflow-hidden">
       {/* Header */}
-      <div className="text-center space-y-4 bg-header h-1/4 figtree font-light">
-        {/* Nav Bar */}
-        <nav className="flex justify-between p-4 pe-64 ps-64 h-1/4 text-white">
-          <button>GERPHIS Z29</button>
-          <div className="space-x-4">
-            <button>Home</button>
-            <button>About</button>
-          </div>
-        </nav>
-
-        {/* Title */}
-        <div className="h-2/3 text-white flex justify-center items-center">
-          <div>
-            <h1 className="text-4xl">SOUTH EAST ASIA</h1>
-            <h2 className="text-4xl italic">FULL COURSE FOODIES</h2>
-          </div>
-        </div>
-
+      <div className="text-center space-y-4 font-light">
+        <Nav />
       </div>
 
       {/* Main */}
-      <div className="text-center space-y-4 h-3/4 p-8">
-        <div>
-          <p className="text-2xl">NIHAO WELCOME!</p>
-          <p className="text-xl">South East Asia foodies are very yummy. In this website we present the the food from 4 sea countries that will make up a full course meal!</p>
-        </div>
-
-        <div className=" py-6 px-12">
+      <div className="text-center flex justify-center items-center py-48 figtree">
+        <div className="space-y-12 px-20">
+          <p className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl">WELCOME!</p>
+          <p className="text-lg md:text-lg lg:text-xl xl:text-2xl font-light ">Welcome to our Southeast Asian food review hub! Explore delicious dishes from four SEA countries, carefully curated to create the perfect full-course meal. Get ready to indulge in the rich flavors and culinary wonders of Southeast Asia! 🍜🍛🥢</p>
           <div>
-            <h1 className="text-2xl font-bold">CHOOSE COUNTRY</h1>
-          </div>
-          <div className="grid grid-cols-2 justify space-x-4">
-            <div className=" flex justify-center">
-              <Image src="/ph.png" alt="Philippines" className="" width={150} height={130} />
-            </div>
-
-            <div className=" flex justify-center">
-              <Image src="/thailand.png" alt="Thailand" className="" width={230} height={130} />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 space-x-4">
-            <div className=" flex justify-center">
-              <Image src="/indonesia.png" alt="indonesia" className="" width={380} height={80} />
-
-            </div>
-            <div className=" flex justify-center">
-              <Image src="/vietnam.png" alt="vietnam" className="" width={80} height={80} />
-            </div>
+            <Link href="/countries" className="px-12 py-4 bg-nav hover:bg-lime-800 rounded-xl text-center lg:text-lg xl:text-xl">Continue</Link>
           </div>
         </div>
-      
       </div>
     </div>
   );
