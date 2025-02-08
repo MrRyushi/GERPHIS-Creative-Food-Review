@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss";
-import withMT from "@material-tailwind/html/utils/withMT";
+
+import withMT from "@material-tailwind/react/utils/withMT";
 
 export default withMT({
   content: [
@@ -14,9 +14,10 @@ export default withMT({
         nav: "#A49E7D",
         gradient1: "#FCE9BE",
         gradient2: "#FFFFFF",
-        textcolor1: "#4A3636"
+        textcolor1: "#4A3636",
+        alternative_white: "#F0F0F0",
       },
     },
   },
   plugins: [],
-}) satisfies Config;
+});

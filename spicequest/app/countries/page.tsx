@@ -37,7 +37,7 @@ const CountryPage = () => {
       <Nav />
       <div className='pt-12 md:pt-24 xl:pt-16 pb-36 space-y-12 px-4 sm:px-0'>
         <div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-slate-900 figtree">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-textcolor1 figtree">
             Explore the Flavors of Southeast Asia
           </h1>
         </div>
@@ -54,10 +54,10 @@ const CountryPage = () => {
                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
               </div>
               <div className="relative text-center p-6 px-6 py-14 md:px-12">
-                <h2 className="mb-6 md:text-2xl xl:text-3xl font-medium text-white">
+                <h2 className="mb-6 md:text-2xl xl:text-3xl font-medium text-alternative_white">
                   {country.shortDesc}
                 </h2>
-                <h5 className="mb-4 text-xl font-semibold text-slate-300">
+                <h5 className="mb-4 text-xl font-semibold text-alternative_white">
                   {country.name}
                 </h5>
                 <Image
