@@ -13,7 +13,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="text-center flex justify-center items-center py-16 xl:py-48">
+      <div className="text-center flex justify-center items-center py-32 xl:py-48">
         <div className="space-y-4 px-20 dm-serif-text text-white">
           <p className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
             SpiceQuest
