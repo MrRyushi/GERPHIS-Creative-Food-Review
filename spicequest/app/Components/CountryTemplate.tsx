@@ -1,10 +1,14 @@
 'use client'
+import Browse from "./Browse";
 import Post from "./Post";
 
 interface CountryTemplateProps {
   countryData: {
     name: string;
   };
+  from: {
+    name: string;
+  }
   posts: Array<{
     username: string;
     date: string;
@@ -15,7 +19,7 @@ interface CountryTemplateProps {
   }>;
 }
 
-const CountryTemplate: React.FC<CountryTemplateProps> = ({ countryData, posts }) => {
+const CountryTemplate: React.FC<CountryTemplateProps> = ({ countryData, posts, from }) => {
   return (
     <div className="bg-gradient-to-t from-gradient2 to-gradient1 w-screen min-h-screen overflow-hidden">
       {/* Header */}
@@ -46,6 +50,19 @@ const CountryTemplate: React.FC<CountryTemplateProps> = ({ countryData, posts })
         ) : (
           <p className="text-gray-500">No food reviews available.</p>
         )}
+      </div>
+
+      {/* Browse Other Countries */}
+      <a id="browse-section">
+        <Browse from={from} />
+      </a>
+
+      {/* Floating Browse More Button */}
+      <div className="fixed bottom-6 right-6">
+        <a href="#browse-section" // Adjust this ID to match the Browse component
+          className="bg-blue-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-transform transform hover:scale-110">
+          <p>Browse more</p> 
+        </a>
       </div>
     </div>
   );
