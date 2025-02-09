@@ -16,10 +16,6 @@ export default withMT({
         textcolor1: "#4A3636",
         alternative_white: "#F0F0F0",
       },
-      animation: {
-        spinSlow: "spin 3s linear infinite",
-        spinHover: "spin 1s linear infinite",
-      },
     },
   },
   plugins: [],
