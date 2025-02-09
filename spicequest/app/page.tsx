@@ -22,7 +22,7 @@ export default function Home() {
             Explore delicious dishes from four SEA countries, carefully curated to create the perfect full-course meal. 
             Get ready to indulge in the rich flavors and culinary wonders of Southeast Asia! 🍜🍛🥢
           </p>
-          <div className="pt-5">
+          <div className="pt-8">
             <Link href="/countries" className="px-12 py-4 bg-nav hover:bg-lime-800 rounded-xl text-center lg:text-lg xl:text-xl">
               Continue
             </Link>
