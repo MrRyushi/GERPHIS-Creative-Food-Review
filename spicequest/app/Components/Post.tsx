@@ -1,5 +1,16 @@
 import ReactMarkdown from "react-markdown";
 
+interface PostProps {
+  post: {
+    username: string;
+    date: string;
+    body: string;
+    tag1?: string;
+    tag2?: string;
+    likes: number;
+  };
+}
+
 const Post: React.FC<PostProps> = ({ post }) => {
   return (
     <div className="bg-white shadow-lg rounded-2xl p-6 w-full xs:w-full sm:w-3/4 md:w-1/2 lg:w-[600px] xl:w-[720px] h-auto overflow-hidden">
