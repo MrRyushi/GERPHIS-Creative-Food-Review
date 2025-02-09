@@ -13,6 +13,7 @@ export default function Home() {
       </div>
 
       {/* Main */}
+<<<<<<< Updated upstream
       <div className="text-center flex justify-center items-center py-48">
         <div className="space-y-4 px-20 dm-serif-text text-white">
           <p className="text-2xl md:text-2xl lg:text-2xl xl:text-3xl">Welcome to </p>
@@ -20,12 +21,9 @@ export default function Home() {
           <p className="figtree text-lg md:text-lg lg:text-xl xl:text-2xl font-light pt-5">
             Welcome to our Southeast Asian food review hub! 
             Explore delicious dishes from four SEA countries, carefully curated to create the perfect full-course meal. 
-            Get ready to indulge in the rich flavors and culinary wonders of Southeast Asia! 🍜🍛🥢
-          </p>
-          <div className="pt-8">
-            <Link href="/countries" className="px-12 py-4 bg-nav hover:bg-lime-800 rounded-xl text-center lg:text-lg xl:text-xl">
-              Continue
-            </Link>
+            Get ready to indulge in the rich flavors and culinary wonders of Southeast Asia! 🍜🍛🥢</p>
+          <div>
+            <Link href="/countries" className="px-12 py-4 bg-nav hover:bg-lime-800 rounded-xl text-center lg:text-lg xl:text-xl">Continue</Link>
           </div>
         </div>
       </div>
