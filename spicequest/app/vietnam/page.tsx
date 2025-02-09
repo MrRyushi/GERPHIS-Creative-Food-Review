@@ -26,7 +26,7 @@ const Vietnam = () => {
     <div className="bg-gradient-to-t from-gradient2 to-gradient1 xl:h-screen overflow-x-hidden">
       {/* Header */}
       <Nav />
-      <CountryTemplate countryData={{ name: "Vietnam" }} posts={posts} />
+      <CountryTemplate countryData={{ name: "Vietnam" }} posts={posts} from={{name:"Vietnam"}}/>
     </div>
   );
 };
