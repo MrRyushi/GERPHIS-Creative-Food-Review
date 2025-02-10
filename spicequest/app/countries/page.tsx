@@ -40,7 +40,7 @@ const CountryPage = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-t from-gradient2 to-gradient1 overflow-hidden xl:h-screen">
+    <div className="bg-gradient-to-t from-gradient1 to-gradient2 overflow-hidden xl:h-screen">
       {/* Header */}
       <Nav />
       <div className="pt-12 md:pt-24 xl:pt-16 pb-36 space-y-12 px-4 sm:px-0">
@@ -51,7 +51,7 @@ const CountryPage = () => {
         </div>
 
         {/* Main */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center items-center figtree px-2 md:px-20 lg:px-28 xl:px-36 gap-4 md:gap-4 lg:gap-4 xl:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center items-center figtree px-2 md:px-12 lg:px-auto xl:px-36 gap-4 md:gap-4 lg:gap-4 xl:gap-8 xl:pt-8">
           {countriesData.map((country, index) => (
             <Link
               key={index}
@@ -68,20 +68,22 @@ const CountryPage = () => {
                 >
                   <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50"></div>
                 </div>
-                <div className="relative text-center p-6 px-6 py-14 md:px-12">
-                  <h2 className="mb-6 md:text-2xl xl:text-3xl font-medium text-alternative_white">
+                <div className="relative flex flex-col justify-between h-full text-center p-6 px-6 pb-12 md:px-12">
+                  <h2 className="mt-32 md:mt-32 lg:mt-16 xl:mt-24 text-lg md:text-2xl lg:text-2xl xl:text-2xl font-medium text-alternative_white">
                     {country.shortDesc}
                   </h2>
-                  <h5 className="mb-4 text-xl font-semibold text-alternative_white">
-                    {country.name}
-                  </h5>
-                  <Image
-                    alt="Flag"
-                    src={country.flag}
-                    width={128}
-                    height={128}
-                    className="relative inline-block h-32 w-32 rounded-full border border-white"
-                  />
+                  <div className="flex flex-col items-center">
+                    <h5 className="mb-4 text-xl font-semibold text-alternative_white">
+                      {country.name}
+                    </h5>
+                    <Image
+                      alt="Flag"
+                      src={country.flag}
+                      width={128}
+                      height={128}
+                      className="inline-block h-32 w-32 rounded-full border border-white"
+                    />
+                  </div>
                 </div>
               </div>
             </Link>
