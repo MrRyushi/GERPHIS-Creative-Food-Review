@@ -4,8 +4,8 @@ import CountryTemplate from "../Components/CountryTemplate";
 const Indonesia = () => {
   const posts = [
     {
-      username: "foodieExplorer",
-      date: "February 9, 2025",
+      username: "Crispin",
+      date: "1941-03-21",
       body:
         "🍜 The Aromatic Dance of Laksa: A Bowl Full of History\n\n" +
         "**A Taste of Tradition**\n" +
@@ -21,14 +21,28 @@ const Indonesia = () => {
       tag1: "Spicy",
       tag2: "Turmeric, Galangal, Clove",
       likes: 120,
+      profile: "/crispin.png",
+      foodPic: "/adobo.png",
     },
     {
-      username: "user2",
-      date: "2025-02-08",
-      body: "I tried the rendang and it was absolutely delicious. Highly recommend!",
-      tag1: "Savory",
-      tag2: "Rich",
+      username: 'Rosario',
+      date: "1941-04-15",
+      body: 'I tried the rendang and it was absolutely delicious. Highly recommend!',
+      tag1: 'Savory',
+      tag2: 'Rich',
       likes: 8,
+      profile: "/rosario.png",
+      foodPic: "/adobo.png",
+    },
+    {
+      username: 'Masugi',
+      date: "1944-06-20",
+      body: 'I tried the rendang and it was absolutely delicious. Highly recommend!',
+      tag1: 'Savory',
+      tag2: 'Rich',
+      likes: 6,
+      profile: "/masugi.png",
+      foodPic: "/adobo.png",
     },
     // Add more posts as needed
   ];

@@ -50,7 +50,7 @@ const Browse: React.FC<BrowseProps> = ({ from }) => {
   );
 
   return (
-    <div className="xl:h-screen">
+    <div className="xl:h-3/4 pb-16">
       <div className="pt-6 md:pt-24 xl:pt-16 pb-6 space-y-6 px-4 sm:px-0">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-textcolor1 figtree ">
           Browse Other Countries
@@ -99,7 +99,7 @@ const Browse: React.FC<BrowseProps> = ({ from }) => {
                       src={country.flag}
                       width={128}
                       height={128}
-                      className="inline-block h-32 w-32 rounded-full border border-white"
+                      className="inline-block h-32 w-32 rounded-full border border-white object-cover"
                     />
                   </div>
                 </div>

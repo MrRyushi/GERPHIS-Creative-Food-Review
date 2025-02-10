@@ -79,9 +79,9 @@ const CountryPage = () => {
                     <Image
                       alt="Flag"
                       src={country.flag}
-                      width={128}
-                      height={128}
-                      className="inline-block h-32 w-32 rounded-full border border-white"
+                      width={1000}
+                      height={720}
+                      className="inline-block h-32 w-32 rounded-full border border-white object-cover"
                     />
                   </div>
                 </div>

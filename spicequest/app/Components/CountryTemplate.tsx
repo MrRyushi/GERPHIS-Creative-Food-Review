@@ -16,6 +16,8 @@ interface CountryTemplateProps {
     tag1?: string;
     tag2?: string;
     likes: number;
+    profile: string;
+    foodPic: string;
   }>;
 }
 
@@ -71,7 +73,7 @@ const CountryTemplate: React.FC<CountryTemplateProps> = ({
       </div>
 
       {/* Floating Browse More Button */}
-      <div className="fixed bottom-6 right-6">
+      <div className="fixed bottom-3 right-3 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 xl:bottom-12 xl:right-12">
         <a
           href="#browse-section" // Adjust this ID to match the Browse component
           className="bg-[#D65D26] text-white p-4 rounded-full shadow-lg flex items-center justify-center transition-transform transform hover:scale-110"

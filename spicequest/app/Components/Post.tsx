@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import Image from "next/image";
 
 interface PostProps {
   post: {
@@ -8,6 +9,8 @@ interface PostProps {
     tag1?: string;
     tag2?: string;
     likes: number;
+    profile: string;
+    foodPic: string;
   };
 }
 
@@ -17,7 +20,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
       {/* Header */}
       <div className="flex flex-col space-y-4">
         <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-gray-300 rounded-full"></div> {/* Profile Placeholder */}
+          <Image className="w-12 h-12 bg-gray-300 rounded-full image object-cover" src={post.profile} alt={"Profile"} width={720} height={720}></Image> {/* Profile Placeholder */}
           <div>
             <h3 className="font-semibold text-gray-800">@{post.username}</h3>
             <p className="text-sm text-gray-500">{post.date}</p>
@@ -30,7 +33,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         </div>
 
         {/* Image Placeholder */}
-        <div className="mt-4 w-full h-48 sm:h-64 md:h-72 bg-gray-200 rounded-lg"></div>
+        <Image className="mt-4 w-full h-48 sm:h-64 md:h-72 bg-gray-200 rounded-lg object-cover" src={post.foodPic} alt={"Adobo"} width={1000} height={1000}></Image>
       </div>
 
       {/* Tags & Footer */}
