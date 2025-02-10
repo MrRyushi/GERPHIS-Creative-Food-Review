@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Browse from "./Browse";
 import Post from "./Post";
 
@@ -26,6 +27,14 @@ const CountryTemplate: React.FC<CountryTemplateProps> = ({
   posts,
   from,
 }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filter posts based on searchQuery (case-insensitive match)
+  const filteredPosts = posts.filter((post) =>
+    post.username.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+
   return (
     <div className="bg-gradient-to-t from-gradient2 to-gradient1 w-screen min-h-screen overflow-hidden">
       {/* Header */}
@@ -46,26 +55,25 @@ const CountryTemplate: React.FC<CountryTemplateProps> = ({
       {/* Search Bar */}
       <div className="justify-center items-center flex m-8">
         <div className="rounded-full bg-white flex justify-center items-center w-1/2 max-w-screen-md p-1 shadow-lg">
-          <input
+        <input
             type="text"
-            placeholder="Search for a dish..."
+            placeholder="Search by username..."
             className="figtree rounded-full w-full p-2 outline-none pl-5"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
       </div>
 
       {/* Posts Section */}
       <div className="flex flex-col items-center space-y-6 px-4 mb-8">
-        {posts.length > 0 ? (
-          posts.map((post, index) => (
-            <Post key={index} post={post} />
-          ))
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((post, index) => <Post key={index} post={post} />)
         ) : (
-          <p className="text-gray-500">
-            No food reviews available.
-          </p>
+          <p className="text-gray-500">No matching food reviews.</p>
         )}
       </div>
+
 
       {/* Browse Other Countries */}
       <div id="browse-section">

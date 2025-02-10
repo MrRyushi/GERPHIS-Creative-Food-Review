@@ -51,7 +51,7 @@ const CountryPage = () => {
         </div>
 
         {/* Main */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center items-center figtree px-2 md:px-12 lg:px-auto xl:px-36 gap-4 md:gap-4 lg:gap-4 xl:gap-8 xl:pt-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 grid-flow-row justify-center items-center figtree px-2 md:px-12 lg:px-auto xl:px-36 gap-4 md:gap-4 lg:gap-4 xl:gap-8 xl:pt-8">
           {countriesData.map((country, index) => (
             <Link
               key={index}

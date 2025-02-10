@@ -6,45 +6,26 @@ const Indonesia = () => {
     {
       username: "Crispin",
       date: "1941-03-21",
-      body:
-        "🍜 The Aromatic Dance of Laksa: A Bowl Full of History\n\n" +
-        "**A Taste of Tradition**\n" +
-        "Laksa is a beloved Southeast Asian dish, tracing its origins to the Peranakan culture—a blend of Chinese and Malay influences. Found in Malaysia, Singapore, and Indonesia, its bold flavors come from coconut milk, shrimp paste, and a medley of spices.\n\n" +
-        "**First Impressions (Sight & Smell)**\n" +
-        "The dish is a stunning mix of vibrant orange broth, fresh green herbs, and red chili slices. The scent? A warm embrace of lemongrass, turmeric, and galangal.\n\n" +
-        "**A Symphony of Textures (Touch & Taste)**\n" +
-        "The silky noodles contrast with the crunch of bean sprouts, while the rich broth coats your tongue in layers of spice and creaminess. Each sip carries a mild heat from chili and a comforting sweetness from coconut milk.\n\n" +
-        "**What Makes It Special?**\n" +
-        "The unique blend of turmeric, galangal, lemongrass, and shrimp paste defines laksa’s deep umami taste. The cooking method—slow-simmering the spice-infused broth—ensures every bite is bursting with layered flavors.\n\n" +
-        "**Would I Recommend It?**\n" +
-        "Absolutely! If you love spicy, fragrant soups with a history as rich as its taste, laksa is a must-try.",
-      tag1: "Spicy",
-      tag2: "Turmeric, Galangal, Clove",
+      body:  
+        "**Nasi Goreng: Indonesia’s Iconic Fried Rice**\n\n" +  
+        "If you love fried rice, then Nasi Goreng is something you definitely have to try. This Indonesian classic is packed with bold flavors—savory, slightly sweet, with a touch of spice. It’s made with day-old rice stir-fried with sweet soy sauce (kecap manis), garlic, shallots, shrimp paste, and chili, giving it that deep umami taste. Usually topped with a fried egg and served with crispy prawn crackers, it’s the kind of dish that’s both comforting and exciting at the same time.\n\n" +  
+
+        "**First Impressions**\n\n" +  
+        "The first thing you’ll notice is the deep golden-brown rice, coated in rich soy sauce and glistening from the heat of the wok. The aroma is mouthwatering—a mix of smoky fried rice, caramelized soy sauce, and a bit of spice from the chili and shrimp paste. And of course, that fried egg on top makes it even more tempting!\n\n" +  
+
+        "**Taste & Texture**\n\n" +  
+        "Each bite is packed with flavor. The rice has that perfect stir-fried texture—not too soft, not too dry—just the right amount of chewiness. You get layers of taste from the sweetness of kecap manis, the saltiness of the shrimp paste, and a bit of heat from the chili. The crispy prawn crackers on the side add a nice crunch, while the fried egg gives a creamy, rich contrast to the dish.\n\n" +  
+
+        "**Would I Recommend It?**\n\n" +  
+        "Absolutely! Whether you’re a fan of fried rice or just looking for something flavorful and satisfying, Nasi Goreng won’t disappoint. You can have it with chicken, seafood, or even a vegetarian version. Best enjoyed hot with a side of sambal for an extra kick, it’s a dish that’s simple yet packed with so much character—definitely a must-try!"  
+        ,
+      tag1: "Savory & Umami",
+      tag2: "Indonesian Cuisine",
       likes: 120,
       profile: "/crispin.png",
-      foodPic: "/adobo.png",
+      foodPic: "/nasi_goreng.png",
     },
-    {
-      username: 'Rosario',
-      date: "1941-04-15",
-      body: 'I tried the rendang and it was absolutely delicious. Highly recommend!',
-      tag1: 'Savory',
-      tag2: 'Rich',
-      likes: 8,
-      profile: "/rosario.png",
-      foodPic: "/adobo.png",
-    },
-    {
-      username: 'Masugi',
-      date: "1944-06-20",
-      body: 'I tried the rendang and it was absolutely delicious. Highly recommend!',
-      tag1: 'Savory',
-      tag2: 'Rich',
-      likes: 6,
-      profile: "/masugi.png",
-      foodPic: "/adobo.png",
-    },
-    // Add more posts as needed
+  
   ];
 
   return (

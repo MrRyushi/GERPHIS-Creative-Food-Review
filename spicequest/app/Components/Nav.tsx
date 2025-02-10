@@ -16,12 +16,6 @@ const Nav = () => {
           >
             Countries
           </Link>
-          <Link
-            href="/about"
-            className="hover:underline underline-offset-4"
-          >
-            About
-          </Link>
         </div>
       </nav>
     </div>
