@@ -15,7 +15,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="text-center flex justify-center items-center py-32 xl:py-48">
         <div className="space-y-4 px-20 dm-serif-text text-white">
-          <p className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <p className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl pt-2 md:pt-12">
             SpiceQuest
           </p>
           <p className="figtree text-lg md:text-lg lg:text-xl xl:text-2xl font-light pt-5 px-auto lg:px-20 xl:px-40">
