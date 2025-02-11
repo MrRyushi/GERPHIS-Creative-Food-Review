@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div
-      className="w-screen h-auto 3xl:h-screen overflow-hidden bg-cover bg-center"
+      className="h-auto 3xl:h-screen overflow-x-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/spicequest.png')" }}
     >
       {/* Header */}
@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="text-center flex justify-center items-center py-12 lg:py-12 xl:py-16 2xl:py-24 h-screen">
-        <div className="space-y-4 px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 dm-serif-text text-white">
+        <div className="space-y-4 px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 dm-serif-text text-white border border-black">
           <motion.div
            initial="hidden"
            animate="visible"
@@ -59,9 +59,9 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <button onClick={scrollToAboutUs} className="absolute bottom-5 w-full">
+          <button onClick={scrollToAboutUs} className="absolute bottom-5">
             <motion.div
-              className="w-10 h-10 flex justify-center items-center text-white text-3xl"
+              className="text-white text-3xl"
               animate={{ y: [0, -10, 0] }} 
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
               {element}
