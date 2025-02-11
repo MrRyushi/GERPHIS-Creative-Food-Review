@@ -59,20 +59,26 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <button onClick={scrollToAboutUs} className="absolute bottom-5">
-            <motion.div
-              className="text-white text-3xl"
-              animate={{ y: [0, -10, 0] }} 
-              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
-              {element}
-            </motion.div>
-          </button>
+          <div className="fixed bottom-5 left-0 right-0 flex justify-center items-center">
+            <button onClick={scrollToAboutUs}>
+              <motion.div
+                className="text-white text-3xl"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                {element}
+              </motion.div>
+            </button>
+          </div>
+
         </div>
       </div>
 
-      <div className="px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 py-20 lg:py-12 xl:py-16 2xl:py-24 text-alternative_white lg:h-screen flex justify-center items-center">
+      <div
+        id="about-us" ref={aboutUsRef} 
+        className="px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 py-20 lg:py-12 xl:py-16 2xl:py-24 text-alternative_white lg:h-screen flex justify-center items-center">
         <div>
-          <div id="about-us" ref={aboutUsRef}>
+          <div>
             <h1 className="font-bold figtree text-2xl">About SpiceQuest</h1>
           </div>
           <div className="figtree text-lg md:text-lg lg:text-xl xl:text-xl font-light pt-5">
