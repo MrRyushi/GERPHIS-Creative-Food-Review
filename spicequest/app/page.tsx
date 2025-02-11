@@ -1,7 +1,18 @@
+'use client'
 import Nav from "./Components/Nav";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
+  const aboutUsRef = useRef<HTMLDivElement>(null);
+  const element = <FontAwesomeIcon icon={faArrowDown} />
+  const scrollToAboutUs = () => {
+    aboutUsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       className="w-screen h-auto 3xl:h-screen overflow-hidden bg-cover bg-center"
@@ -15,31 +26,53 @@ export default function Home() {
       {/* Main Content */}
       <div className="text-center flex justify-center items-center py-12 lg:py-12 xl:py-16 2xl:py-24 h-screen">
         <div className="space-y-4 px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 dm-serif-text text-white">
-          <p className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
-            SpiceQuest
-          </p>
-          <div className="figtree text-lg md:text-lg lg:text-xl xl:text-xl font-light pt-5">
-            <p className="">
-              Welcome to our Southeast Asian food review hub! Explore delicious
-              dishes from four SEA countries, carefully curated to create the
-              perfect full-course meal. Get ready to indulge in the rich flavors
-              and culinary wonders of Southeast Asia!
+          <motion.div
+           initial="hidden"
+           animate="visible"
+           variants={{
+             hidden: { opacity: 0 },
+             visible: {
+               opacity: 1,
+               transition: { staggerChildren: 0.3 },
+             },
+           }}
+          >
+            <p className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
+              SpiceQuest
             </p>
-          </div>
-          <div className="pt-10 lg:pt-12 xl:pt-8 2xl:-pt-12">
-            <Link
-              href="/countries"
-              className="px-12 py-4 hover:bg-[#DC6C3A] bg-[#D65D26] rounded-xl text-center lg:text-lg xl:text-xl"
-            >
-              Continue
-            </Link>
-          </div>
+            <div className="figtree text-lg md:text-lg lg:text-xl xl:text-xl font-light pt-5">
+              <p className="">
+                Welcome to our Southeast Asian food review hub! Explore delicious
+                dishes from four SEA countries, carefully curated to create the
+                perfect full-course meal. Get ready to indulge in the rich flavors
+                and culinary wonders of Southeast Asia!
+              </p>
+            </div>
+          
+            <div className="pt-10 lg:pt-12 xl:pt-8 2xl:-pt-12">
+              <Link
+                href="/countries"
+                className="px-12 py-4 hover:bg-[#DC6C3A] bg-[#D65D26] rounded-xl text-center lg:text-lg xl:text-xl"
+              >
+                Continue
+              </Link>
+            </div>
+          </motion.div>
+
+          <button onClick={scrollToAboutUs} className="absolute bottom-5 w-full">
+            <motion.div
+              className="w-10 h-10 flex justify-center items-center text-white text-3xl"
+              animate={{ y: [0, -10, 0] }} 
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
+              {element}
+            </motion.div>
+          </button>
         </div>
       </div>
 
       <div className="px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 py-20 lg:py-12 xl:py-16 2xl:py-24 text-alternative_white lg:h-screen flex justify-center items-center">
         <div>
-          <div>
+          <div id="about-us" ref={aboutUsRef}>
             <h1 className="font-bold figtree text-2xl">About SpiceQuest</h1>
           </div>
           <div className="figtree text-lg md:text-lg lg:text-xl xl:text-xl font-light pt-5">

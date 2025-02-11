@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Browse from "./Browse";
 import Post from "./Post";
+import { motion } from "framer-motion";
 
 interface CountryTemplateProps {
   countryData: {
@@ -66,19 +67,46 @@ const CountryTemplate: React.FC<CountryTemplateProps> = ({
       </div>
 
       {/* Posts Section */}
-      <div className="flex flex-col items-center space-y-6 px-4 mb-8">
+      <motion.div
+        className="flex flex-col items-center space-y-6 px-4 mb-8"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
+      >
         {filteredPosts.length > 0 ? (
-          filteredPosts.map((post, index) => <Post key={index} post={post} />)
+          filteredPosts.map((post, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+              }}
+            >
+              <Post post={post} />
+            </motion.div>
+          ))
         ) : (
           <p className="text-gray-500">No matching food reviews.</p>
         )}
-      </div>
+      </motion.div>
 
 
       {/* Browse Other Countries */}
-      <div id="browse-section">
+      <motion.div
+        id="browse-section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <Browse from={from} />
-      </div>
+      </motion.div>
 
       {/* Floating Browse More Button */}
       <div className="fixed bottom-3 right-3 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 xl:bottom-12 xl:right-12">
