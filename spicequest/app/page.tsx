@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <div className="fixed bottom-5 left-0 right-0 flex justify-center items-center">
+          <div className="absolute bottom-5 left-0 right-0 flex justify-center items-center">
             <button onClick={scrollToAboutUs}>
               <motion.div
                 className="text-white text-3xl"
