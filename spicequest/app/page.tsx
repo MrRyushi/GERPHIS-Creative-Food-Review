@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="text-center flex justify-center items-center py-12 lg:py-12 xl:py-16 2xl:py-24 h-screen">
-        <div className="space-y-4 px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 dm-serif-text text-white border border-black">
+        <div className="space-y-4 px-12 md:px-20 lg:px-20 xl:px-24 2xl:px-48 dm-serif-text text-white">
           <motion.div
            initial="hidden"
            animate="visible"
